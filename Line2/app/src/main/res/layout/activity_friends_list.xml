@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.b0302s.line2.FriendsList">
+
+    <TextView
+        android:id="@+id/friend_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/friends"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@color/black"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_alignParentTop="true">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@id/friend_titlebar"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/magnifying_glass"
+
+        android:hint="@string/search_friends"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:background="@drawable/rounded_edittext"
+        >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:text="@string/profile"
+        android:textColor="@color/thick_gray"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:background="@color/light_gray"/>
+
+    <ListView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/profile_name"
+        android:divider="@color/divider_friends"
+        android:dividerHeight="0.5dp"
+        android:choiceMode="singleChoice"
+        android:background="@color/white">
+    </ListView>
+
+
+    <TextView
+        android:id="@+id/friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:text="@string/friends"
+        android:textColor="@color/thick_gray"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:background="@color/light_gray"/>
+
+    <ListView
+        android:id="@+id/friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friend"
+        android:divider="@color/divider_friends"
+        android:dividerHeight="0.5dp"
+        android:choiceMode="singleChoice"
+        android:background="@color/white"/>
+
+
+</RelativeLayout>
