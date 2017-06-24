@@ -11,20 +11,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.b0302s.line2.LoginActivity">
 
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+    <!--&lt;!&ndash; Login progress &ndash;&gt;-->
+    <!--<ProgressBar-->
+        <!--android:id="@+id/login_progress"-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:visibility="gone" />-->
 
-    <LinearLayout
-        android:id="@+id/email_login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -47,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,10 +79,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/email_unregistered"
             android:textStyle="bold" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+
 
             <TextView
                 android:id="@+id/facebook_text"
@@ -97,6 +90,5 @@
                 android:drawableLeft="@drawable/facebook"
                 android:drawablePadding="3dp"
                 />
-        </RelativeLayout>
-    </LinearLayout>
+
 </LinearLayout>

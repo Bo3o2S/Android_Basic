@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.b0302s.line2.ChatActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@color/chatroom_title"/>
+
     <LinearLayout
         android:id="@+id/top"
         android:layout_width="match_parent"

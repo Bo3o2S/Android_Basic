@@ -9,4 +9,6 @@
     <color name="black">#000000</color>
     <color name="thick_gray">#a0a0a0</color>
     <color name="light_gray">#f0f0f0</color>
+    <color name="chatroom_title"> #000040</color>
+
 </resources>

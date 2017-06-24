@@ -1,0 +1,60 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+    <PreferenceCategory
+        android:title="개인정보">
+        <Preference android:title="프로필"
+            android:defaultValue="180"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:entries="@null"
+            android:entryValues="@null"
+            android:key="sync_frequency"/>
+        <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
+             design guidelines. -->
+        <Preference android:title="계정">
+
+        </Preference>
+        <CheckBoxPreference
+            android:key="pref_key_auto_delete"
+            android:title="개인정보보호"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="꾸미기">
+        <Preference android:title="스티커"
+            android:defaultValue="180"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:entries="@null"
+            android:entryValues="@null"
+            android:key="sync_frequency"/>
+        <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
+             design guidelines. -->
+        <Preference android:title="테마">
+
+        </Preference>
+        <SwitchPreference
+            android:key="pref_key_auto_delete"
+            android:title="코인"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="서비스">
+        <SwitchPreference android:title="알림"
+            android:key="알림"
+            android:defaultValue="true"/>
+        <RingtonePreference
+            android:title="소리">
+
+        </RingtonePreference>
+
+
+        <SwitchPreference
+            android:key="pref_key_auto_delete"
+            android:title="동영상"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>
