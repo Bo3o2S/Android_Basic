@@ -3,6 +3,7 @@ package com.example.b0302s.line2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -91,8 +92,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-       // mLoginFormView = findViewById(R.id.email_login_form);
-       // mProgressView = findViewById(R.id.login_progress);
+        mLoginFormView = findViewById(R.id.email_login_form);
+        mProgressView = findViewById(R.id.login_progress);
 
         TextView textview = (TextView) findViewById(R.id.facebook_text);
         textview.setText("FaceBook 연동");
@@ -166,22 +167,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
-
-        // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }
+//        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+//            mPasswordView.setError(getString(R.string.error_invalid_password));
+//            focusView = mPasswordView;
+//            cancel = true;
+//        }
+//
+//        // Check for a valid email address.
+//        if (TextUtils.isEmpty(email)) {
+//            mEmailView.setError(getString(R.string.error_field_required));
+//            focusView = mEmailView;
+//            cancel = true;
+//        } else if (!isEmailValid(email)) {
+//            mEmailView.setError(getString(R.string.error_invalid_email));
+//            focusView = mEmailView;
+//            cancel = true;
+//        }
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -321,13 +322,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 return false;
             }
 
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
-            }
+//            for (String credential : DUMMY_CREDENTIALS) {
+//                String[] pieces = credential.split(":");
+//                if (pieces[0].equals(mEmail)) {
+//                    // Account exists, return true if the password matches.
+//                    return pieces[1].equals(mPassword);
+//                }
+//            }
 
             // TODO: register the new account here.
             return true;
@@ -339,6 +340,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                //finish();
+                Intent intent = new Intent(LoginActivity.this, FriendsList.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
