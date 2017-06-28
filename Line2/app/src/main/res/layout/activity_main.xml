@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.b0302s.line2.MainActivity">
 
-    <menu xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".MainActivity">
+    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tabhost_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <item
-            android:id="@+id/action_search"
-            android:icon="@android:drawable/ic_menu_search"
-            app:showAsAction="always"
-            app:actionViewClass="android.support.v7.widget.SearchView"
-            android:title="Search"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout android:id="@+id/friend_list_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-    </menu>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/chat_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/timeline_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/phonecall_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/settings_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-4dp"
+                android:background="#e6f6f2"
+                />
+        </LinearLayout>
+    </TabHost>
