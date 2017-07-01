@@ -1,45 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.b0302s.line2.TimelineActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/timeline_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="20sp"
+                android:text="타임라인"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/chatroom_title"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@color/light_gray"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/write_timeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="글쓰기"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/write_timelineactivity"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/photo_timeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/write_timeline"
+                        android:text="사진"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/photo_timelineactivity"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/channel_timeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/photo_timeline"
+                        android:text="채널"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/channel_timelineactivity"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <include layout="@layout/content_timeline"
+            android:id="@+id/include" />
+        </LinearLayout>
+</LinearLayout>
+<!--<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--android:layout_weight="1"-->
+    <!--tools:context="com.example.b0302s.line2.TimelineActivity">-->
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/app_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
 
         <!--app:expandedTitleGravity="center"-->
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            android:background="@color/chatroom_title"
+        <!--<android.support.design.widget.CollapsingToolbarLayout-->
+            <!--android:id="@+id/toolbar_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:fitsSystemWindows="true"-->
+            <!--android:background="@color/chatroom_title"-->
 
-            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll">
+            <!--app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"-->
+            <!--app:contentScrim="?attr/colorPrimary"-->
+            <!--&gt;-->
+            <!--app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"-->
+            <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="?attr/actionBarSize"-->
+                    <!--android:layout_weight="1"-->
+                    <!--app:title="@string/time_line"-->
+                    <!--app:layout_collapseMode="parallax"-->
+                    <!--app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
+        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
 
-            <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:layout_weight="1"
-                    app:title="@string/time_line"
-                    app:layout_collapseMode="parallax"
-                    app:popupTheme="@style/AppTheme.PopupOverlay"/>
-        </android.support.design.widget.CollapsingToolbarLayout>
+    <!--</android.support.design.widget.AppBarLayout>-->
 
-    </android.support.design.widget.AppBarLayout>
+    <!--<include layout="@layout/content_timeline"-->
+        <!--android:id="@+id/include" />-->
 
-    <include layout="@layout/content_timeline"
-        android:id="@+id/include" />
-
-</android.support.design.widget.CoordinatorLayout>
+<!--</android.support.design.widget.CoordinatorLayout>-->

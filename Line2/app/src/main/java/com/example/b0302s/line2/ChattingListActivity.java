@@ -26,11 +26,11 @@ public class ChattingListActivity extends AppCompatActivity {
         profile_data.add(profile);
 
         ArrayList<item_friends_list> data = new ArrayList<>();
-        item_friends_list friend1 = new item_friends_list(R.drawable.profile, "친구1", "010-4433-5532");
-        item_friends_list friend2 = new item_friends_list(R.drawable.profile, "친구2", "010-2256-2192");
-        item_friends_list friend3 = new item_friends_list(R.drawable.profile, "친구3", "010-7654-4321");
-        item_friends_list friend4 = new item_friends_list(R.drawable.profile, "친구4", "010-6643-4432");
-        item_friends_list friend5 = new item_friends_list(R.drawable.profile, "친구5", "010-5522-4432");
+        item_friends_list friend1 = new item_friends_list(R.drawable.profile, "강성호", "010-4433-5532");
+        item_friends_list friend2 = new item_friends_list(R.drawable.profile, "강옥태", "010-2256-2192");
+        item_friends_list friend3 = new item_friends_list(R.drawable.profile, "김경섭", "010-7654-4321");
+        item_friends_list friend4 = new item_friends_list(R.drawable.profile, "이우종", "010-6643-4432");
+        item_friends_list friend5 = new item_friends_list(R.drawable.profile, "이관호", "010-5522-4432");
 
         data.add(friend1);
         data.add(friend2);

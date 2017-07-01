@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         LocalActivityManager mLocalActivityManager = new LocalActivityManager(this, false);
         mLocalActivityManager.dispatchCreate(savedInstanceState);
         tabHost.setup(mLocalActivityManager);
+        //tabHost.setup();
 
         // 첫번째 탭
         intent = new Intent().setClass(this, FriendsList.class);

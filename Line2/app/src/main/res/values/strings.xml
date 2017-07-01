@@ -200,5 +200,11 @@
     <string name="title_activity_test">Sign in</string>
     <string name="title_activity_main2">Main2Activity</string>
 
+    <!-- UI Elements -->
+    <string name="btn_capture">Click</string>
+
+    <!-- Toast Messages -->
+    <string name="camera_not_found">No camera harware found</string>
+    <string name="take_photo_help">Touch anywhere on screen to take picture</string>
 
 </resources>

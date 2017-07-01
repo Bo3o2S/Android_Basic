@@ -94,7 +94,7 @@ public class FriendsList extends AppCompatActivity{
               bundle.putInt("profile_image", data.getIcon());
               profiledialog.setArguments(bundle);
               profiledialog.show(getFragmentManager(), "FriendDialog");
-
+              onPause();
         }
     }
 
@@ -106,14 +106,13 @@ public class FriendsList extends AppCompatActivity{
 
             ProfileDialog profiledialog = new ProfileDialog();
             item_profile_list data =  (item_profile_list)adapterView.getItemAtPosition(position);
-
             Bundle bundle = new Bundle();
             bundle.putString("name", data.getName());
             bundle.putString("phone_number", data.getPhone_number());
             bundle.putInt("profile_image", data.getIcon());
             profiledialog.setArguments(bundle);
             profiledialog.show(getFragmentManager(), "FriendDialog");
-
+            onPause();
         }
     }
 }
